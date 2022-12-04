@@ -2,6 +2,7 @@
 import React from 'react';
 import { StatusBar, StyleSheet, SafeAreaView, View } from 'react-native';
 import { useFonts, Montserrat_400Regular, Montserrat_700Bold, } from '@expo-google-fonts/montserrat';
+import AppLoading from "expo-app-loading";
 
 import Cesta from './src/telas/cesta';
 import mockCesta from './src/mocks/cesta'
@@ -13,8 +14,7 @@ export default function App() {
   })
 
   if (!fontsLoaded) {
-    return <View >
-    </View>;
+    return AppLoading;
   }
 
   return (
