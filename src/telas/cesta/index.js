@@ -6,11 +6,11 @@ import Detalhes from "./componentes/Detalhes";
 
 const width = Dimensions.get('screen').width;
 
-export default function Cesta() {
+export default function Cesta({topo, detalhes}) {
     return <>
-        <Topo />
+        <Topo {...topo}/>
         <View styles={styles.cesta}>
-            <Detalhes />
+            <Detalhes {...detalhes}/>
         </View>
     </>
 }
